@@ -1,0 +1,37 @@
+{
+  "name": "email-authentication-with-oauth",
+  "version": "1.0.0",
+  "description": "Email Authentication with OAuth",
+  "main": "index.js",
+  "author": "Louisa Katlubeck",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.2",
+    "express-handlebars": "^2.0.1",
+    "express-session": "^1.11.3",
+    "mysql": "^2.8.0",
+    "randomstring": "^1.1.5",
+    "request": "2.87.0",
+    "http": "0.0.0",
+    "https":"1.0.0",
+    "querystring": "0.2.0"
+
+  },
+  "engines": {
+    "node": "8.x.x"
+  },
+  "scripts": {
+    "deploy": "gcloud app deploy",
+    "start": "node index.js",
+    "lint": "repo-tools lint",
+    "pretest": "npm run lint",
+    "system-test": "repo-tools test app",
+    "test": "npm run system-test",
+    "e2e-test": "repo-tools test deploy"
+  },
+  "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "^2.3.0",
+    "semistandard": "^12.0.1"
+  }
+}
